@@ -140,3 +140,13 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec $SHELL -l"
+
+# heroku aliases
+alias prodc="heroku run rails c -a catchandrelease"
+alias prodlogs="cd ~/catchandrelease; heroku logs --tail -a catchandrelease"
+alias stagingc="heroku run rails c -a catchandrelease-staging"
+alias staginglogs="cd ~/catchandrelease; heroku logs --tail -a catchandrelease-staging"
+
+# Rails stuff
+alias rdm="rake db:migrate; rake db:migrate RAILS_ENV=test"
+alias myspecs="rake cr:specs"
